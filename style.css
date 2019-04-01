@@ -1,0 +1,122 @@
+body {
+    display: grid;
+    grid-template-areas:
+            "header header header"
+            "nav article news"
+            "nav footer news";
+    grid-template-columns: minmax(100px, 1fr) 5fr minmax(200px, 1fr);
+    grid-template-rows: 60px 1fr 50px;
+    grid-gap: 10px;
+}
+
+header, nav, article, news, footer {
+    padding: 20px;
+    background: #fcf2de;
+    
+}
+#pageHeader {
+    grid-area: header;
+}
+
+#pageNav {
+    grid-area: nav;
+}
+
+#pageArticle {
+    grid-area: article;
+}
+
+#pageNews {
+    grid-area: news;
+}
+
+#pageFooter {
+    grid-area: footer;
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------*/
+
+/*body {
+    background-color: skyblue;
+}
+
+.cell {
+    background-color: pink;
+    border: 1px solid;
+    border-color: green;
+    border-radius: 3px;
+    text-align: center;
+    height: 23px;
+
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: 30px 30px 30px;
+}
+*/
+
+
+#grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 0.5vw;
+}
+
+#grid > div {
+    font-size: larger;
+    padding: 0px;
+    background: #fffed7;
+    border: 1px solid darkslategrey;
+    text-align: center;
+    height: auto;
+}
+
+.line_grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 2fr 2fr;
+}
+
+.line_grid > div {
+    border-left: green 1px solid;
+}
+
+#xoGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    text-align: center;
+    background: #bcd2c6;
+    /*  padding: 5px;*/
+}
+#xoGrid > div {
+    font-size: larger;
+    padding: 5px;
+    background: gold;
+    border: 5px solid darkslategrey;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+label {
+    display: block;
+    background: #08C;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+input[type=checkbox]:checked ~ .to-be-changed {
+    color: red;
+}
