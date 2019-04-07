@@ -16,6 +16,7 @@ header, nav, article, news, footer {
 }
 #pageHeader {
     grid-area: header;
+    text-align: right;
 }
 
 #pageNav {
@@ -35,6 +36,9 @@ header, nav, article, news, footer {
     text-align: center;
 }
 
+#userName {
+    display: inline-block;
+}
 
 /* ------------------------------------------------------*/
 
