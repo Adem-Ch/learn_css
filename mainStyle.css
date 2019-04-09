@@ -1,3 +1,105 @@
-.area {
-    display: flex;
+body {
+    display: grid;
+    grid-template-areas:
+            "header  header userInfo"
+            "reportsListArea reportInfo notifies"
+            "footer footer footer";
+    grid-template-columns: minmax(100px, 1fr) 3fr minmax(100px, 1fr);
+    grid-template-rows: 60px 1fr 50px;
+    grid-gap: 10px;
+}
+
+header, userInfo, reportsListArea, reportInfo, notifies, footer {
+    padding: 20px;
+    background: #fcf2de;
+
+}
+
+#pageHeader {
+    grid-area: header;
+    text-align: left;
+}
+
+#pageUserInfo {
+    grid-area: userInfo;
+    text-align: right;
+}
+
+#pageReportsListArea {
+    grid-area: reportsListArea;
+}
+
+#pageReportInfo {
+    grid-area: reportInfo;
+}
+
+#pageNotifies {
+    grid-area: notifies;
+    text-align: left;
+}
+
+#pageFooter {
+    grid-area: footer;
+    text-align: center;
+}
+
+#userName {
+    display: inline-block;
+}
+
+/*---------------------------------------------*/
+
+.reportListItems {
+    display: grid;
+    border-style: solid;
+    border-color: #1fd22e;
+    border-radius: 5px;
+    grid-gap: 10px;
+}
+
+.reportListItem {
+    border-style: solid;
+    border: 2px;
+    border-color: #5e5cfc;
+    border-radius: 3px;
+}
+
+
+/*----------------------------------------------*/
+
+.rounded {
+    counter-reset: li; /* increment for list index */
+    padding: 0; /* otstup ot vneshney granici */
+}
+.rounded a { /* caption of list */
+    position: relative;
+    display: flex; /* block */
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: .5em 0; /* rastoyanie mejdu brokami */
+    background: #DAD2CA; /* background color by default */
+    color: #444; /* text color*/
+    border-radius: .3em;
+    transition: .3s ease-in;
+}
+.rounded a:hover {background: #18e91a;}
+.rounded a:active {background: #e910b6;}
+.rounded a:hover:before {transform: rotate(90deg);}
+.rounded a:before {
+    content: ">";
+    /*counter-increment: li;*/
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    /*transition: all .05s ease-out;*/
 }
